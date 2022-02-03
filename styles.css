@@ -1,10 +1,74 @@
-:root {
-  
+@font-face {
+  font-family: 'Outfit';
+  src:
+    url("fonts/outfit-regular.woff2")
+    url("fonts/outfit-regular.woff");
+  font-weight: 400;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'Outfit';
+  src:
+    url("fonts/outfit-bold.woff2")
+    url("fonts/outfit-bold.woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --box-color: hsl(0, 0%, 100%); /* White */
+  --background-color: hsl(212, 45%, 89%); /* light grey */
+  --paragraph-text: hsl(220, 15%, 55%); /* Grayish blue */
+  --headline-text: hsl(218, 44%, 22%); /* Dark Blue */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100%;
+}
+
+img {
+  display: block;
+  margin: 0 auto 0 auto;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--headline-text);
+  margin: 30px 25px 0 25px;
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+  color: var(--paragraph-text);
+  margin: 20px 20px 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
 
 .qr-component {
   width: 315px;
   height: 500px;
   background-color: white;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 15px;
+  padding-top: 15px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
